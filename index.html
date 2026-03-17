@@ -1039,7 +1039,7 @@ confirmBtn.addEventListener('click', async () => {
     modal.style.display = 'none';
 
     try {
-        const res = await fetch("http://play.minehood.fun:19101/vote", {
+        const res = await fetch("http://play.minehood.fun/vote", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -1170,7 +1170,7 @@ setInterval(() => {
 // ========== LEADERBOARD FUNCTION ==========
 async function fetchLeaderboard() {
     try {
-        const res = await fetch("http://play.minehood.fun:19101/leaderboard");
+        const res = await fetch("http://play.minehood.fun/leaderboard");
         const data = await res.json();
 
         const leaderboardDiv = document.getElementById("leaderboard");
